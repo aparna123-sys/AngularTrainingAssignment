@@ -3,7 +3,6 @@
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title *ngIf="!isEdit">Add Employee</mat-card-title>
     <mat-card-title *ngIf="isEdit">Edit Employee</mat-card-title>
-
   </mat-card-header>
   <mat-card-content>
     <form class="form" [formGroup]="addEmpForm" (ngSubmit)="addEditEmp()">

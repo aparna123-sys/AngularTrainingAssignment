@@ -8,19 +8,19 @@
       <div class="form-group">
       <mat-label >Username</mat-label>
       <mat-form-field class="full-width" appearance="outline">
-        <input type="text" class="form-control" formControlName="username">
-      <mat-error *ngIf="(username.touched || submitted)">
-        {{getErrorMessage()}}
-      </mat-error>
+        <input type="text" matInput class="form-control" formControlName="username">
+        <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
+          username is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       </div>
       <div class="form-group">
         <mat-label >Password</mat-label>
         <mat-form-field class="full-width" appearance="outline">
-          <input type="text" class="form-control" formControlName="password">
-        <mat-error *ngIf="(username.touched || submitted)">
-          {{getErrorMessage()}}
-        </mat-error>
+          <input type="text" matInput class="form-control" formControlName="password">
+          <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+            password is <strong>required</strong>
+          </mat-error>
        </mat-form-field>
       </div>
       <button mat-raised-button color="primary">Login</button>
