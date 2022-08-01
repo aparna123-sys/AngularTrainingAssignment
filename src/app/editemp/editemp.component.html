@@ -1,0 +1,49 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Edit Employee</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="form" [formGroup]="editEmpForm" (ngSubmit)="editEmp()">
+      <div class="form-group">
+      <mat-label >FirstName</mat-label>
+      <mat-form-field class="full-width" appearance="outline">
+        <input type="text" class="form-control" formControlName="firstname" >
+      <!-- <mat-error *ngIf="(firstname.touched || submitted)">
+        {{getErrorMessage()}}
+      </mat-error> -->
+      </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-label >LastName</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <input type="text" class="form-control" formControlName="lastname">
+        <!-- <mat-error *ngIf="(lastname.touched || submitted)">
+          {{getErrorMessage()}}
+        </mat-error> -->
+       </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-label >email</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <input type="text" class="form-control" formControlName="email" >
+        <!-- <mat-error *ngIf="(email.touched || submitted)">
+          {{getErrorMessage()}}
+        </mat-error> -->
+       </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-label >birthdate</mat-label>
+        <mat-form-field class="full-width" appearance="outline">
+          <input type="text" class="form-control" formControlName="birthdate" >
+        <!-- <mat-error *ngIf="(birthdate.touched || submitted)">
+          {{getErrorMessage()}}
+        </mat-error> -->
+       </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="editEmp()">Edit Employee</button>
+
+    </form>
+  </mat-card-content>
+
+</mat-card>

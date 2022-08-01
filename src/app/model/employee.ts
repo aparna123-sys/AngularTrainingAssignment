@@ -1,0 +1,33 @@
+export class Employee {
+  id!: number;
+  firstName!: string;
+  lastName!: string;
+  email!: string;
+  birthDate!: string;
+}
+
+export const EmployeeColumns = [
+  {
+  key: 'firstName',
+  type: 'text',
+  label: 'First Name',
+  required: true,
+},
+{
+  key: 'lastName',
+  type: 'text',
+  label: 'Last Name',
+},
+{
+  key: 'email',
+  type: 'email',
+  label: 'Email',
+  required: true,
+  pattern: '.+@.+',
+},
+{
+  key: 'birthDate',
+  type: 'date',
+  label: 'Date of Birth',
+}
+];
